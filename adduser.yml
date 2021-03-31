@@ -8,5 +8,5 @@
   tasks:
   - name: Add a user
     user:
-      name: petejones
+      name: scooper
       state: present
