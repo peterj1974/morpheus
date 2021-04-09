@@ -3,7 +3,7 @@
     gather_facts: false
     tasks:
       - name: Add User
-        win_user:
-          name: "{{ morpheus['instance']['hostname'] }}"
-          password: "Password123?"
-          state: present
+          user:
+            name: "{{ morpheus['instance']['hostname'] }}"
+            password: "Password123?"
+            state: present
