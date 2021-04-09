@@ -1,9 +1,10 @@
-  - name: Add a user
-    hosts: all
-    gather_facts: false
-    tasks:
-      - name: Add User
-          user:
-            name: "{{ morpheus['instance']['hostname'] }}"
-            password: "Password123?"
-            state: present
+  ---
+    - name: Add a user
+      hosts: all
+      gather_facts: false
+      tasks:
+        - name: Add User
+            user:
+              name: "{{ morpheus['instance']['hostname'] }}"
+              password: "Password123?"
+              state: present
