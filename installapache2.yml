@@ -1,5 +1,0 @@
----
-  - name: install apache2 Ubuntu
-    apt:
-      name: apache2
-      state: latest
