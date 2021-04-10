@@ -28,7 +28,7 @@
 
   - name: install apache2
     yum:
-      name: apache2
+      name: httpd
       state: latest
     when: ansible_distribution == "CentOS"
 
