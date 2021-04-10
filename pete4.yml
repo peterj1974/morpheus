@@ -1,0 +1,28 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install apache2 and php Ubuntu
+    apt:
+      name: 
+        - apache2
+        - mysql-server
+        - php
+        - libapache2-mod-php
+        - php-mysql
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+
+  - name: install httpd and php for CentOS
+    yum:
+      name:
+        - httpd
+        - mysql
+        -  php
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
