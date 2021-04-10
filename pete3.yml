@@ -32,8 +32,8 @@
       state: latest
     when: ansible_distribution == "CentOS"
 
-  - name: install php support
+  - name: install php
     yum:
-      name: libapache2-mod-php
+      name: php
       state: latest
     when: ansible_distribution == "CentOS"
